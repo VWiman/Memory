@@ -24,13 +24,13 @@ let lastZ = 0;
 cards.sort(() => Math.random() - 0.5);
 
 // Set the attributes of the restart button.
-reload.style.display = "block";
-reload.style.position = "sticky";
-reload.style.bottom = "140px";
+reload.style.display = "block"
+reload.style.position = "sticky"
+reload.style.bottom = "140px"
 reload.style.left = "calc(50% - 40px)";
-reload.setAttribute("type", "button");
-reload.setAttribute("class", "reloadButton");
-reload.innerText = "RESTART";
+reload.setAttribute("type", "button")
+reload.setAttribute("class", "reloadButton")
+reload.innerText = "RESTART"
 
 // Initialize each card's state.
 cards.forEach((card) => {
@@ -70,12 +70,9 @@ function createCard(card, index) {
       newCard.showing == false &&
       lastCard != newCard
     ) {
+      match = true;
       newCard.showing = true;
       isShowing(newCard, newCardEl);
-      setTimeout(() => {
-        console.log("Delayed for 1 second.");
-        match = true;
-      }, 1000);
     } else {
       newCard.showing = true;
       isShowing(newCard, newCardEl);
@@ -91,9 +88,9 @@ function createCard(card, index) {
       console.log(victoryPoints);
       // Check for game victory condition.
       if (victoryPoints === 6) {
-        reload.style.marginTop = "70px";
-        reload.style.backgroundColor = "#37B478";
-        reload.style.color = "#f5f5f5";
+        reload.style.marginTop = "70px"
+        reload.style.backgroundColor = "#37B478"
+        reload.style.color = "#f5f5f5"
         document.querySelector(".winBox").innerHTML =
           '<h2 class="winText center customFont">You did it!<h2>';
       }
@@ -146,7 +143,7 @@ function matchTrue(li, ni) {
   lasti.style.transform = "translate(-50 %, -50 %)";
   newi.style.display = "block";
   lasti.style.display = "block";
-  newi.style.position = "absolute";
+newi.style.position = "absolute";
   lasti.style.position = "absolute";
   newi.style.left = "calc(50% - 80px)";
   lasti.style.left = "calc(50% - 80px)";
