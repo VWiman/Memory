@@ -70,12 +70,12 @@ function createCard(card, index) {
       newCard.showing == false &&
       lastCard != newCard
     ) {
-      match = true;
       setTimeout(() => {
         console.log("Delayed for 1 second.");
+        match = true;
+        newCard.showing = true;
+        isShowing(newCard, newCardEl);
       }, 6000);
-      newCard.showing = true;
-      isShowing(newCard, newCardEl);
     } else {
       newCard.showing = true;
       isShowing(newCard, newCardEl);
