@@ -73,7 +73,7 @@ function createCard(card, index) {
       match = true;
       setTimeout(() => {
         console.log("Delayed for 1 second.");
-      }, 1000);
+      }, 6000);
       newCard.showing = true;
       isShowing(newCard, newCardEl);
     } else {
