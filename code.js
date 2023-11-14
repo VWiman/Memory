@@ -72,8 +72,8 @@ function createCard(card, index) {
     ) {
       match = true;
       setTimeout(() => {
-        console.log("Wait 1 second for player to see card.");
-      }, "1000");
+        console.log("Delayed for 1 second.");
+      }, 1000);
       newCard.showing = true;
       isShowing(newCard, newCardEl);
     } else {
